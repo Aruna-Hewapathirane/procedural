@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Free Pascal Tutorial</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      padding-top: 20px;
+    }
+    .card-body {
+      padding: 20px;
+    }
+    .container {
+      max-width: 1200px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1 class="text-center mb-5">Free Pascal Tutorial: Procedural Programming Keywords</h1>
+    
+    <!-- Row for Cards -->
+    
+    <!-- Card for program -->
+    <div class="row mb-4">
+      <div class="col-12">
+        <div class="card">
+          <div class="card-header bg-primary text-white">
+            <h5 class="card-title">program</h5>
+          </div>
+          <div class="card-body">
+            <p><strong>Description:</strong> The <code>program</code> keyword defines the name of the program and is used to begin the main block of the code.</p>
+            <pre><code>program HelloWorld;
+begin
+  writeln('Hello, World!');
+end.
+            </code></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card for uses -->
+    <div class="row mb-4">
+      <div class="col-12">
+        <div class="card">
+          <div class="card-header bg-primary text-white">
+            <h5 class="card-title">uses</h5>
+          </div>
+          <div class="card-body">
+            <p><strong>Description:</strong> The <code>uses</code> keyword is used to include external libraries (units) that provide additional functionality for the program.</p>
+            <pre><code>program HelloWorld;
+uses crt;
+begin
+  clrscr;
+  writeln('Hello, World!');
+  readln;
+end.
+            </code></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card for begin and end -->
+    <div class="row mb-4">
+      <div class="col-12">
+        <div class="card">
+          <div class="card-header bg-primary text-white">
+            <h5 class="card-title">begin and end</h5>
+          </div>
+          <div class="card-body">
+            <p><strong>Description:</strong> These keywords define a block of code. The <code>begin</code> marks the start and the <code>end</code> marks the end.</p>
+            <pre><code>program HelloWorld;
+begin
+  writeln('This is the start of a program.');
+  writeln('This is the second line of the program.');
+end.
+            </code></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card for var -->
+    <div class="row mb-4">
+      <div class="col-12">
+        <div class="card">
+          <div class="card-header bg-primary text-white">
+            <h5 class="card-title">var</h5>
+          </div>
+          <div class="card-body">
+            <p><strong>Description:</strong> The <code>var</code> keyword is used to declare variables that will store data that may change during the program's execution.</p>
+            <pre><code>program VariableExample;
+var
+  num1, num2, sum: Integer;
+begin
+  num1 := 5;
+  num2 := 10;
+  sum := num1 + num2;
+  writeln('The sum is: ', sum);
+end.
+            </code></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card for const -->
+    <div class="row mb-4">
+      <div class="col-12">
+        <div class="card">
+          <div class="card-header bg-primary text-white">
+            <h5 class="card-title">const</h5>
+          </div>
+          <div class="card-body">
+            <p><strong>Description:</strong> The <code>const</code> keyword defines constant values that cannot be changed during the program's execution.</p>
+            <pre><code>program ConstantExample;
+const
+  Pi = 3.14159;
+begin
+  writeln('The value of Pi is: ', Pi);
+end.
+            </code></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card for if and then -->
+    <div class="row mb-4">
+      <div class="col-12">
+        <div class="card">
+          <div class="card-header bg-primary text-white">
+            <h5 class="card-title">if and then</h5>
+          </div>
+          <div class="card-body">
+            <p><strong>Description:</strong> The <code>if</code> statement is used to execute a block of code conditionally, and the <code>then</code> specifies the action if the condition is true.</p>
+            <pre><code>program IfExample;
+var
+  age: Integer;
+begin
+  age := 20;
+  if age >= 18 then
+    writeln('You are an adult.');
+end.
+            </code></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card for else -->
+    <div class="row mb-4">
+      <div class="col-12">
+        <div class="card">
+          <div class="card-header bg-primary text-white">
+            <h5 class="card-title">else</h5>
+          </div>
+          <div class="card-body">
+            <p><strong>Description:</strong> The <code>else</code> keyword is used to specify an alternative block of code to execute if the condition is false.</p>
+            <pre><code>program IfElseExample;
+var
+  age: Integer;
+begin
+  age := 16;
+  if age >= 18 then
+    writeln('You are an adult.')
+  else
+    writeln('You are a minor.');
+end.
+            </code></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card for for and to -->
+    <div class="row mb-4">
+      <div class="col-12">
+        <div class="card">
+          <div class="card-header bg-primary text-white">
+            <h5 class="card-title">for and to</h5>
+          </div>
+          <div class="card-body">
+            <p><strong>Description:</strong> The <code>for</code> loop is used to iterate over a range of values, and the <code>to</code> keyword defines the upper limit.</p>
+            <pre><code>program ForLoopExample;
+var
+  i: Integer;
+begin
+  for i := 1 to 5 do
+    writeln('Iteration ', i);
+end.
+            </code></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card for while and do -->
+    <div class="row mb-4">
+      <div class="col-12">
+        <div class="card">
+          <div class="card-header bg-primary text-white">
+            <h5 class="card-title">while and do</h5>
+          </div>
+          <div class="card-body">
+            <p><strong>Description:</strong> The <code>while</code> loop runs a block of code as long as the condition is true.</p>
+            <pre><code>program WhileLoopExample;
+var
+  i: Integer;
+begin
+  i := 1;
+  while i <= 5 do
+  begin
+    writeln('Iteration ', i);
+    i := i + 1;
+  end;
+end.
+            </code></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card for repeat and until -->
+    <div class="row mb-4">
+      <div class="col-12">
+        <div class="card">
+          <div class="card-header bg-primary text-white">
+            <h5 class="card-title">repeat and until</h5>
+          </div>
+          <div class="card-body">
+            <p><strong>Description:</strong> The <code>repeat</code> loop executes a block of code at least once and continues as long as the condition specified by <code>until</code> is false.</p>
+            <pre><code>program RepeatUntilExample;
+var
+  i: Integer;
+begin
+  i := 1;
+  repeat
+    writeln('Iteration ', i);
+    i := i + 1;
+  until i > 5;
+end.
+            </code></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card for function -->
+    <div class="row mb-4">
+      <div class="col-12">
+        <div class="card">
+          <div class="card-header bg-primary text-white">
+            <h5 class="card-title">function</h5>
+          </div>
+          <div class="card-body">
+            <p><strong>Description:</strong> A <code>function</code> performs a task and returns a value.</p>
+            <pre><code>program FunctionExample;
+function AddNumbers(a, b: Integer): Integer;
+begin
+  AddNumbers := a + b;
+end;
+
+begin
+  writeln('Sum of 5 and 7 is: ', AddNumbers(5, 7));
+end.
+            </code></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card for procedure -->
+    <div class="row mb-4">
+      <div class="col-12">
+        <div class="card">
+          <div class="card-header bg-primary text-white">
+            <h5 class="card-title">procedure</h5>
+          </div>
+          <div class="card-body">
+            <p><strong>Description:</strong> A <code>procedure</code> performs a task but does not return a value.</p>
+            <pre><code>program ProcedureExample;
+procedure Greet(name: String);
+begin
+  writeln('Hello, ', name);
+end;
+
+begin
+  Greet('Alice');
+  Greet('Bob');
+end.
+            </code></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card for exit -->
+    <div class="row mb-4">
+      <div class="col-12">
+        <div class="card">
+          <div class="card-header bg-primary text-white">
+            <h5 class="card-title">exit</h5>
+          </div>
+          <div class="card-body">
+            <p><strong>Description:</strong> The <code>exit</code> keyword is used to terminate a program or a procedure.</p>
+            <pre><code>program ExitExample;
+begin
+  writeln('Before exit');
+  exit;
+  writeln('This will not be printed.');
+end.
+            </code></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card for type -->
+    <div class="row mb-4">
+      <div class="col-12">
+        <div class="card">
+          <div class="card-header bg-primary text-white">
+            <h5 class="card-title">type</h5>
+          </div>
+          <div class="card-body">
+            <p><strong>Description:</strong> The <code>type</code> keyword defines new types, like records and arrays.</p>
+            <pre><code>program TypeExample;
+type
+  Point = record
+    x, y: Integer;
+  end;
+var
+  p: Point;
+begin
+  p.x := 5;
+  p.y := 10;
+  writeln('Point coordinates: ', p.x, ', ', p.y);
+end.
+            </code></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card for array -->
+    <div class="row mb-4">
+      <div class="col-12">
+        <div class="card">
+          <div class="card-header bg-primary text-white">
+            <h5 class="card-title">array</h5>
+          </div>
+          <div class="card-body">
+            <p><strong>Description:</strong> An <code>array</code> is a collection of variables of the same type.</p>
+            <pre><code>program ArrayExample;
+var
+  nums: array[1..5] of Integer;
+  i: Integer;
+begin
+  nums[1] := 10;
+  nums[2] := 20;
+  nums[3] := 30;
+  nums[4] := 40;
+  nums[5] := 50;
+  
+  for i := 1 to 5 do
+    writeln('nums[', i, ']: ', nums[i]);
+end.
+            </code></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card for with -->
+    <div class="row mb-4">
+      <div class="col-12">
+        <div class="card">
+          <div class="card-header bg-primary text-white">
+            <h5 class="card-title">with</h5>
+          </div>
+          <div class="card-body">
+            <p><strong>Description:</strong> The <code>with</code> keyword simplifies access to fields of a record or object.</p>
+            <pre><code>program WithExample;
+type
+  Point = record
+    x, y: Integer;
+  end;
+var
+  p: Point;
+begin
+  p.x := 5;
+  p.y := 10;
+  with p do
+  begin
+    writeln('x: ', x, ', y: ', y);
+  end;
+end.
+            </code></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card for case -->
+    <div class="row mb-4">
+      <div class="col-12">
+        <div class="card">
+          <div class="card-header bg-primary text-white">
+            <h5 class="card-title">case</h5>
+          </div>
+          <div class="card-body">
+            <p><strong>Description:</strong> The <code>case</code> keyword is used to execute a block of code based on the value of a variable.</p>
+            <pre><code>program CaseExample;
+var
+  grade: Char;
+begin
+  grade := 'A';
+  case grade of
+    'A': writeln('Excellent!');
+    'B': writeln('Good!');
+    'C': writeln('Average!');
+    'D': writeln('Poor!');
+    'F': writeln('Fail!');
+  else
+    writeln('Invalid grade');
+  end;
+end.
+            </code></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Bootstrap JS and dependencies -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
